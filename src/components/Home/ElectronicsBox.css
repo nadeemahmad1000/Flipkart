@@ -1,0 +1,108 @@
+.electronics-box {
+    width: 100%;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 0.25rem;
+}
+
+.electronics-box > div:first-child {
+    display: flex;
+    place-items: center;
+    place-content: space-between;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+}
+
+.electronics-box > div > h3 {
+    font-size: 1.25rem;
+    font-family: 'Inter';
+    display: inline;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+.electronics-box > div > button {
+    color: #ffffff;
+    font-size: 0.92rem;
+    padding: 0.5rem 1rem;
+    background: var(--flipkart-theme);
+    border: 1px solid var(--flipkart-theme);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    gap: 0.25rem;
+}
+
+.electronics-item-box {
+    width: 100%;
+    border-radius: 0.25rem;
+    display: flex;
+    place-items: center;
+    place-content: flex-start;
+    gap: 0 1rem;
+    overflow: hidden;
+}
+
+.electronics-item {
+    min-width: 13.5rem;
+    background: #ffffff;
+    align-items: stretch;
+    padding: 0.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+    gap: 0.25rem 0;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.electronics-item > img {
+    width: 85%;
+    object-fit: contain;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 1rem;
+}
+
+.electronics-item:hover > img {
+    transform: scale(1.08);
+}
+
+.product-name {
+    color: #212121;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.01px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow-wrap: break-word;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    text-align: center;
+    font-family: 'Inter';
+}
+
+.starting-price {
+    max-width: 100%;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    letter-spacing: -0.01px;
+    display: inline;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Inter';
+}

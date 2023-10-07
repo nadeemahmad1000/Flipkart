@@ -1,0 +1,156 @@
+header {
+    width: 100%;
+    height: 3.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    background: var(--flipkart-theme);
+    box-shadow: 0 0.125rem 0.2rem 0 #0000004d;
+}
+
+header > nav {
+    width: 100%;
+    max-width: 100rem;
+    height: 3.5rem;
+    color: #f0f0f0;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: auto 32% auto;
+    grid-template-areas: "Logo SearchBox NavBox";
+    place-items: center;
+    place-content: center;
+    gap: 0 1rem;
+}
+
+.logo-box {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    grid-area: Logo;
+}
+
+.logo-box > a {
+    color: inherit;
+    font-size: 0.69rem;
+    font-weight: 500;
+    font-style: italic;
+    text-decoration: none;
+    display: flex;
+    place-items: flex-start;
+}
+
+.logo-box > a > span {
+    color: #ffe500;
+    margin: 0 0.2rem;
+}
+
+.flipkart-plus-logo {
+    width: 0.625rem;
+}
+
+.logo-box > a:hover, .logo-box > a:active {
+    text-decoration: underline;
+}
+
+.search-box {
+    width: 100%;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    box-shadow: 0 0.125rem 0.25rem 0 #0000003b;
+    grid-area: SearchBox;
+}
+
+.search-input {
+    width: 100%;
+    height: 2.25rem;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    border: 0;
+    border-radius: 0.125rem 0 0 0.125rem;
+    outline: 0 none;
+    padding: 0 1rem;
+}
+
+.search-button {
+    width: 2.75rem;
+    height: 2.25rem;
+    cursor: pointer;
+    border: 1px solid #ffffff;
+    border-radius: 0 0.125rem 0.125rem 0;
+    background: #ffffff;
+    padding: 0.25rem 0.75rem 0 0.5rem;
+}
+
+.nav-box {
+    display: flex;
+    place-items: center;
+    place-content: center;
+    gap: 0 3rem;
+    margin-left: 2rem;
+    grid-area: NavBox;
+}
+
+.nav-box > button {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    letter-spacing: 0.1px;
+    color: #ffffff;
+    background: var(--flipkart-theme);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    place-items: center;
+}
+
+.caret-light {
+    margin: 0.25rem 0 0 0.5rem;
+    transform: rotate(270deg);
+    transition: transform 0.1s, -webkit-transform 0.1s;
+}
+
+.caret-light > path {
+    fill: #ffffff;
+    opacity: 0.8;
+}
+
+#account:hover > .caret-light, #more:hover > .caret-light {
+    transform: rotate(90deg);
+}
+
+.cart-icon {
+    margin-right: 0.5rem;
+}
+
+/* media query for responsiveness */
+
+@media only screen and (max-width: 1024px) {
+    header {
+        height: 7rem;
+    }
+
+    header > nav {
+        height: 7rem;
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+        "Logo NavBox"
+        "SearchBox SearchBox";
+        justify-items: flex-end;
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header > nav {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .nav-box {
+        gap: 2rem;
+    }
+}

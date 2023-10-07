@@ -1,0 +1,116 @@
+.flipkart-home {
+    width: 100%;
+    max-width: 100rem;
+    color: #212121;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+    gap: 1rem 0;
+}
+
+:not(input):not(textarea):not(button) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.products-box {
+    width: 100%;
+    color: #111112;
+    background: #ffffff;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    place-content: flex-start;
+    position: relative;
+    overflow: auto;
+}
+
+.product {
+    min-width: 8rem;
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+}
+
+.product > div {
+    width: 4rem;
+    height: 4rem;
+    min-width: inherit;
+    min-height: inherit;
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+.product > div, .product > span {
+    display: flex;
+    place-items: center;
+    place-content: center;
+}
+
+.product > div > img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    transition: opacity .3s linear;
+}
+
+.product > span {
+    font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.display {
+    width: 100%;
+    border-radius: 0.25rem;
+    /* position: relative; */
+}
+
+.display > img {
+    width: 100%;
+    margin: auto;
+    display: block;
+    inset: 0px;
+    padding: inherit;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    aspect-ratio: 211 / 35;
+}
+
+/* media query for responsiveness */
+
+@media only screen and (max-width: 1024px) {
+    .product {
+        min-width: 6rem;
+    }
+
+    .product > div {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .product > span {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .flipkart-home {
+        padding: 0.5rem;
+    }
+
+    .product > div {
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 0.25rem;
+    }
+}

@@ -1,0 +1,145 @@
+.flipkart-footer {
+    width: 100%;
+    color: #ffffffde;
+    background: #172337;
+    border-top: 1px solid #dddddd;
+    margin-top: 1.5rem;
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+}
+
+.upper-footer-nav-links {
+    width: 100%;
+    max-width: 100rem;
+    padding-top: 1rem;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    place-content: space-around;
+    flex-wrap: wrap;
+}
+
+.nav-link-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-link-column > h5 {
+    color: #878787;
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-bottom: 0.625rem;
+}
+
+.nav-link-column > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-link-column > a {
+    width: max-content;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 2;
+    display: block;
+}
+
+.nav-link-column > a:hover {
+    text-decoration: underline;
+}
+
+.nav-link-column > p {
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.nav-link-column > p > a {
+    font-weight: 500;
+    color: var(--flipkart-theme);
+}
+
+.lower-footer-nav-links {
+    width: 100%;
+    max-width: 100rem;
+    font-size: 0.875rem;
+    border-top: 1px solid #454d5e;
+    padding-top: 1.5rem;
+    margin-top: 2.5rem;
+    display: -webkit-flex;
+    display: flex;
+    place-items: center;
+    place-content: space-around;
+}
+
+.lower-footer-nav-links > div {
+    display: flex;
+    place-items: center;
+    place-content: center;
+    gap: 0 4rem;
+}
+
+.lower-footer-nav-links > div > div {
+    display: flex;
+    place-items: center;
+    place-content: center;
+}
+
+.lower-footer-nav-links > div > div > img {
+    margin-right: 0.5rem;
+}
+
+/* media query for responsiveness */
+
+@media only screen and (max-width: 1268px) {
+    .upper-footer-nav-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: flex-start;
+        justify-items: center;
+        gap: 1.5rem;
+    }
+
+    .lower-footer-nav-links {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .flipkart-footer {
+        padding: 1rem;
+    }
+
+    .upper-footer-nav-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lower-footer-nav-links > div {
+        gap: 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .flipkart-footer {
+        padding: 0.5rem;
+    }
+
+    .upper-footer-nav-links {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .lower-footer-nav-links > div:first-child {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .lower-footer-nav-links > div:last-child {
+        display: none;
+    }
+}

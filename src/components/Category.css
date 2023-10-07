@@ -1,0 +1,67 @@
+.category-box {
+    width: 100%;
+    min-height: 2.5rem;
+    position: relative;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    background: #ffffff;
+    box-shadow: 0 1px 1px 0 #00000029;
+}
+
+.category-box > div {
+    display: flex;
+    place-items: center;
+    place-content: flex-start;
+    overflow: auto;
+    gap: 0 3.75rem;
+    padding: 0.75rem;
+}
+
+.category-option {
+    color: #212121;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    place-items: baseline;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.category-option:hover {
+    color: var(--flipkart-theme);
+}
+
+.caret-dark {
+    margin: 0.25rem 0 0 0.5rem;
+    transform: rotate(270deg);
+    transition: transform 0.1s, -webkit-transform 0.1s;
+}
+
+.caret-dark > path {
+    fill: #878787;
+    opacity: 0.5;
+}
+
+.category-option:hover > .caret-dark {
+    transform: rotate(90deg);
+}
+
+.category-option:hover > .caret-dark > path {
+    fill: var(--flipkart-theme);
+    opacity: 1;
+}
+
+/* media query for responsiveness */
+
+@media only screen and (max-width: 1268px) {
+    .category-box > div {
+        gap: 0 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .category-box > div {
+        gap: 0 1.5rem;
+    }
+}

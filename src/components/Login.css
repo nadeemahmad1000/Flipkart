@@ -1,0 +1,170 @@
+main {
+    width: 100%;
+    position: relative;
+}
+
+.login-box {
+    width: 53rem;
+    max-width: 53rem;
+    height: 33rem;
+    margin: 1rem auto 0;
+    background: #ffffff;
+    box-shadow: 0 0.125rem 0.25rem 0 #00000014;
+    display: flex;
+    place-items: center;
+    place-content: center;
+}
+
+.login-box > aside {
+    width: 40%;
+    height: 100%;
+    background-color: var(--flipkart-theme);
+    background-image: url("../assets/login.png");
+    background-position: center 85%;
+    background-repeat: no-repeat;
+    padding: 2.5rem 2rem;
+}
+
+.login-box > aside > h1 {
+    color: #ffffff;
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.login-box > aside > p {
+    color: #dbdbdb;
+    font-size: 1.125rem;
+    line-height: 150%;
+    margin-top: 1rem;
+}
+
+.login-form {
+    width: 60%;
+    height: 100%;
+    padding: 3.5rem 2.25rem 1rem 2.25rem;
+    background: #ffffff;
+    position: relative;
+}
+
+.login-form > div:first-child {
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 2.125rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#email {
+    width: 100%;
+    color: #000000;
+    font-size: inherit;
+    background: #ffffff;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0.5rem 0.625rem 0.625rem 0;
+}
+
+.blue-underline {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.blue-underline::before {
+    left: 50%;
+    -webkit-transform-origin: left;
+    transform-origin: left;
+}
+
+.blue-underline::after {
+    right: 50%;
+    -webkit-transform-origin: right;
+    transform-origin: right;
+}
+
+.blue-underline::before, .blue-underline::after {
+    content: "";
+    height: 1px;
+    width: 50%;
+    bottom: 1px;
+    position: absolute;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    will-change: transform;
+    background: var(--flipkart-theme);
+    transition: transform 0.2s ease;
+}
+
+#email:focus ~ .blue-underline::before, #email:focus ~ .blue-underline::after {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.email-label {
+    color: #878787;
+    font-size: 1rem;
+    font-weight: 400;
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    -webkit-transform: translateY(0.625rem);
+    transform: translateY(0.625rem);
+    transition: -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+    will-change: transform;
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    opacity: 0.8;
+}
+
+#email:focus ~ .email-label {
+    font-size: 0.875rem;
+    transform: translateY(-0.875rem);
+}
+
+.agreement {
+    color: #878787;
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.agreement > a {
+    color: var(--flipkart-theme);
+}
+
+.login-form > button {
+    width: 100%;
+    height: 3rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.125rem;
+    outline: none;
+    background: #fb641b;
+    box-shadow: 0 1px 0.125rem 0 #00000033;
+    margin-top: 1rem;
+    padding: 0.625rem 1.25rem;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: super;
+    transition: box-shadow 0.2s ease;
+}
+
+.signup-link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2rem;
+    text-align: center;
+}
+
+.signup-link > a {
+    color: var(--flipkart-theme);
+    font-weight: 500;
+    user-select: none;
+}
